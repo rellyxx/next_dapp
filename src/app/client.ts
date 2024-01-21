@@ -13,6 +13,7 @@ export function ConnectWalletClient() {
         const errorMessage ="MetaMask or another web3 wallet is not installed. Please install one to proceed.";
         throw new Error(errorMessage);
     }
+    console.log("transport",transport);
     
     // Delcalre a Wallet Client
     const walletClient = createWalletClient({
@@ -32,11 +33,14 @@ export function ConnectPublicClient() {
         const errorMessage ="MetaMask or another web3 wallet is not installed. Please install one to proceed.";
         throw new Error(errorMessage);
     }
+    console.log("transport",transport);
+    
     
     // Delcare a Public Client
     const publicClient = createPublicClient({
         chain: polygonMumbai,
-        transport: transport,
+        // transport: transport,
+        transport: http(),
     });
     
     return publicClient;
