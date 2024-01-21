@@ -30,9 +30,9 @@ export default function WalletButton() {
         }
     }
 
-    useEffect(()=>{
-        handleClick()
-    },[])
+    // useEffect(()=>{
+    //     handleClick()
+    // },[])
 // Unimportant Section Below / Nice to Have UI
     return (
         <>
